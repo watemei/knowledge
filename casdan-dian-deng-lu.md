@@ -95,10 +95,8 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 **前端页面设置**
 
-&lt;img src="captcha.jpg" class="login\_code\_icon"
-
 ```
-                            onclick="this.src='captcha.jpg?'+Math.random\(\)" /&gt;
+ <img src="captcha.jpg" class="login_code_icon"        onclick="this.src='captcha.jpg?'+Math.random\(\)" 
 ```
 
 **效果展示**
