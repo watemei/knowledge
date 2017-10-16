@@ -45,95 +45,53 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 **web.xml配置KaptchaServlet**
 
-&lt;!--Kaptcha 验证码  --&gt;&lt;!--
-
-&lt;servlet&gt;
-
-&lt;servlet-name&gt;kaptcha&lt;/servlet-name&gt;
-
-&lt;servlet-class&gt;com.google.code.kaptcha.servlet.KaptchaServlet&lt;/servlet-class&gt;
-
-&lt;init-param&gt;
-
-&lt;param-name&gt;kaptcha.border&lt;/param-name&gt;
-
-&lt;param-value&gt;no&lt;/param-value&gt;
-
-&lt;/init-param&gt;
-
-&lt;init-param&gt;
-
-&lt;param-name&gt;kaptcha.border.color&lt;/param-name&gt;
-
-&lt;param-value&gt;105,179,90&lt;/param-value&gt;
-
-&lt;/init-param&gt;
-
-&lt;init-param&gt;
-
-&lt;param-name&gt;kaptcha.textproducer.font.color&lt;/param-name&gt;
-
-&lt;param-value&gt;red&lt;/param-value&gt;
-
-&lt;/init-param&gt;
-
-&lt;init-param&gt;
-
-&lt;param-name&gt;kaptcha.image.width&lt;/param-name&gt;
-
-&lt;param-value&gt;250&lt;/param-value&gt;
-
-&lt;/init-param&gt;
-
-&lt;init-param&gt;
-
-&lt;param-name&gt;kaptcha.image.height&lt;/param-name&gt;
-
-&lt;param-value&gt;90&lt;/param-value&gt;
-
-&lt;/init-param&gt;
-
-&lt;init-param&gt;
-
-&lt;param-name&gt;kaptcha.textproducer.font.size&lt;/param-name&gt;
-
-&lt;param-value&gt;70&lt;/param-value&gt;
-
-&lt;/init-param&gt;
-
-&lt;init-param&gt;
-
-&lt;param-name&gt;kaptcha.session.key&lt;/param-name&gt;
-
-&lt;param-value&gt;code&lt;/param-value&gt;
-
-&lt;/init-param&gt;
-
-&lt;init-param&gt;
-
-&lt;param-name&gt;kaptcha.textproducer.char.length&lt;/param-name&gt;
-
-&lt;param-value&gt;4&lt;/param-value&gt;
-
-&lt;/init-param&gt;
-
-&lt;init-param&gt;
-
-&lt;param-name&gt;kaptcha.textproducer.font.names&lt;/param-name&gt;
-
-&lt;param-value&gt;宋体,楷体,微软雅黑&lt;/param-value&gt;
-
-&lt;/init-param&gt;
-
-&lt;/servlet&gt;
-
-&lt;servlet-mapping&gt;
-
-&lt;servlet-name&gt;kaptcha&lt;/servlet-name&gt;
-
-&lt;url-pattern&gt;/ClinicCountManager/kaptcha.jpg&lt;/url-pattern&gt;
-
-&lt;/servlet-mapping&gt;
+```
+<!--Kaptcha 验证码  --><!--
+<servlet>
+    <servlet-name>kaptcha</servlet-name>
+    <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+    <init-param>
+    <param-name>kaptcha.border</param-name>
+    <param-value>no</param-value>
+    </init-param>
+    <init-param>
+    <param-name>kaptcha.border.color</param-name>
+    <param-value>105,179,90</param-value>
+    </init-param>
+    <init-param>
+    <param-name>kaptcha.textproducer.font.color</param-name>
+    <param-value>red</param-value>
+    </init-param>
+    <init-param>
+    <param-name>kaptcha.image.width</param-name>
+    <param-value>250</param-value>
+    </init-param>
+    <init-param>
+    <param-name>kaptcha.image.height</param-name>
+    <param-value>90</param-value>
+    </init-param>
+    <init-param>
+    <param-name>kaptcha.textproducer.font.size</param-name>
+    <param-value>70</param-value>
+    </init-param>
+    <init-param>
+    <param-name>kaptcha.session.key</param-name>
+    <param-value>code</param-value>
+    </init-param>
+    <init-param>
+    <param-name>kaptcha.textproducer.char.length</param-name>
+    <param-value>4</param-value>
+    </init-param>
+    <init-param>
+    <param-name>kaptcha.textproducer.font.names</param-name>
+    <param-value>宋体,楷体,微软雅黑</param-value>
+    </init-param>
+</servlet>
+<servlet-mapping>
+    <servlet-name>kaptcha</servlet-name>
+    <url-pattern>/ClinicCountManager/kaptcha.jpg</url-pattern>
+</servlet-mapping>
+```
 
 **前端页面设置**
 
