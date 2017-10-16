@@ -185,5 +185,7 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD60.tmp.jpg)
 
-t/http�����n
+github代码地址：
+
+[https://github.com/watemei/kaptcha](https://github.com/watemei/kaptcha)
 
