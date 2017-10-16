@@ -1,102 +1,3 @@
-  
-@font-face{  
-font-family:"Times New Roman";  
-}  
-  
-@font-face{  
-font-family:"宋体";  
-}  
-  
-@font-face{  
-font-family:"Calibri";  
-}  
-  
-@font-face{  
-font-family:"微软雅黑";  
-}  
-  
-@font-face{  
-font-family:"Tahoma";  
-}  
-  
-@list l0:level1{  
-mso-level-number-format:decimal;  
-mso-level-suffix:tab;  
-}  
-  
-@list l0:level2{  
-mso-level-number-format:decimal;  
-mso-level-suffix:tab;  
-}  
-  
-@list l0:level3{  
-mso-level-number-format:decimal;  
-mso-level-suffix:tab;  
-}  
-  
-@list l0:level4{  
-mso-level-number-format:decimal;  
-mso-level-suffix:tab;  
-}  
-  
-@list l0:level5{  
-mso-level-number-format:decimal;  
-mso-level-suffix:tab;  
-}  
-  
-@list l0:level6{  
-mso-level-number-format:decimal;  
-mso-level-suffix:tab;  
-}  
-  
-@list l0:level7{  
-mso-level-number-format:decimal;  
-mso-level-suffix:tab;  
-}  
-  
-@list l0:level8{  
-mso-level-number-format:decimal;  
-mso-level-suffix:tab;  
-}  
-  
-@list l0:level9{  
-mso-level-number-format:decimal;  
-mso-level-suffix:tab;  
-}  
-  
-p.MsoNormal{  
-mso-style-name:正文;  
-mso-style-parent:"";  
-margin:0pt;  
-margin-bottom:.0001pt;  
-mso-pagination:none;  
-text-align:justify;  
-text-justify:inter-ideograph;  
-font-family:Calibri;  
-font-size:10.5000pt;  
-}  
-  
-span.msoIns{  
-mso-style-type:export-only;  
-mso-style-name:"";  
-text-decoration:underline;  
-text-underline:single;  
-color:blue;  
-}  
-  
-span.msoDel{  
-mso-style-type:export-only;  
-mso-style-name:"";  
-text-decoration:line-through;  
-color:red;  
-}  
-@page{mso-page-border-surround-header:no;  
-	mso-page-border-surround-footer:no;}@page Section0{  
-size:595.3000pt 841.9000pt;  
-layout-grid:15.6000pt;  
-}  
-div.Section0{page:Section0;}
-
 **引言**
 
 使用goole Kaptcha 生成的验证码样式如下图，
@@ -107,15 +8,11 @@ div.Section0{page:Section0;}
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD38.tmp.jpg)
 
-
-
 **Google Kaptcha简介**
 
 kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生成各种样式的验证码，因为它是可配置的。kaptcha工作的原理是调用 com.google.code.kaptcha.servlet.KaptchaServlet，生成一个图片。同时将生成的验证码字符串放到 HttpSession中。
 
 使用kaptcha可以方便的配置：
-
-
 
 验证码的字体
 
@@ -133,8 +30,6 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 可以看出功能还是蛮多的，配置也提出来。
 
-
-
 **google Kaptcha的使用及配置**
 
 **maven配置引用**
@@ -148,11 +43,9 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 </dependency>
 ```
 
-
-
 **web.xml配置KaptchaServlet**
 
-&lt;!--Kaptcha 验证码  --&gt;&lt;!--
+&lt;!--Kaptcha 验证码  --&gt;&lt;!--
 
 &lt;servlet&gt;
 
@@ -246,13 +139,13 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 &lt;img src="captcha.jpg" class="login\_code\_icon"
 
-                                onclick="this.src='captcha.jpg?'+Math.random\(\)" /&gt;
+```
+                            onclick="this.src='captcha.jpg?'+Math.random\(\)" /&gt;
+```
 
 **效果展示**
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD39.tmp.jpg)
-
-
 
 开始尝试通过配置实现，但是效果一字体只能单一颜色，背景样式鱼眼样式、3D、普通模糊,不太好看，只能看源码找方案;
 
@@ -270,8 +163,6 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD4C.tmp.jpg)
 
-
-
 **重写DefaultKaptcha为DefaultCASKaptcha**
 
 重写需要干两件事情：
@@ -286,8 +177,6 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 通过生成随机干扰线实现。
 
-
-
 **验证码字体的位置及彩色设置**
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD4E.tmp.jpg)
@@ -296,25 +185,27 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 **1、定位初始位置；**
 
-        int startPosX = width / \(2 + text.length\(\)\);
+```
+    int startPosX = width / \(2 + text.length\(\)\);
 
-        int startPosY =\(height - fontSize\) / 5 + fontSize;
+    int startPosY =\(height - fontSize\) / 5 + fontSize;
+```
 
 **2、通过GlyphVector获取字体外边框的宽度；**
 
-        GlyphVector gv =  chosenFonts\[i\].createGlyphVector\(frc, rand\);
+```
+    GlyphVector gv =  chosenFonts\[i\].createGlyphVector\(frc, rand\);
 
-        double charWidth = gv.getVisualBounds\(\).getWidth\(\);
+    double charWidth = gv.getVisualBounds\(\).getWidth\(\);
+```
 
 **3、通过位移增加绘制下一个验证码字。**
 
-         startPosX = startPosX + \(int\) charWidth + 2;
-
-
+```
+     startPosX = startPosX + \(int\) charWidth + 2;
+```
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD5F.tmp.jpg)
-
-
 
 **修改web.xml配置**
 
@@ -344,13 +235,9 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 &lt;/servlet&gt;
 
-
-
 **最终效果图**
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD60.tmp.jpg)
-
-
 
 t/http�����n
 
