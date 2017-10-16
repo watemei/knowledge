@@ -51,40 +51,40 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
     <servlet-name>kaptcha</servlet-name>
     <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
     <init-param>
-    <param-name>kaptcha.border</param-name>
-    <param-value>no</param-value>
+        <param-name>kaptcha.border</param-name>
+        <param-value>no</param-value>
     </init-param>
     <init-param>
-    <param-name>kaptcha.border.color</param-name>
-    <param-value>105,179,90</param-value>
+        <param-name>kaptcha.border.color</param-name>
+        <param-value>105,179,90</param-value>
     </init-param>
     <init-param>
-    <param-name>kaptcha.textproducer.font.color</param-name>
-    <param-value>red</param-value>
+        <param-name>kaptcha.textproducer.font.color</param-name>
+        <param-value>red</param-value>
     </init-param>
     <init-param>
-    <param-name>kaptcha.image.width</param-name>
-    <param-value>250</param-value>
+        <param-name>kaptcha.image.width</param-name>
+        <param-value>250</param-value>
     </init-param>
     <init-param>
-    <param-name>kaptcha.image.height</param-name>
-    <param-value>90</param-value>
+        <param-name>kaptcha.image.height</param-name>
+        <param-value>90</param-value>
     </init-param>
     <init-param>
-    <param-name>kaptcha.textproducer.font.size</param-name>
-    <param-value>70</param-value>
+        <param-name>kaptcha.textproducer.font.size</param-name>
+        <param-value>70</param-value>
     </init-param>
     <init-param>
-    <param-name>kaptcha.session.key</param-name>
-    <param-value>code</param-value>
+        <param-name>kaptcha.session.key</param-name>
+        <param-value>code</param-value>
     </init-param>
     <init-param>
-    <param-name>kaptcha.textproducer.char.length</param-name>
-    <param-value>4</param-value>
+        <param-name>kaptcha.textproducer.char.length</param-name>
+        <param-value>4</param-value>
     </init-param>
     <init-param>
-    <param-name>kaptcha.textproducer.font.names</param-name>
-    <param-value>宋体,楷体,微软雅黑</param-value>
+        <param-name>kaptcha.textproducer.font.names</param-name>
+        <param-value>宋体,楷体,微软雅黑</param-value>
     </init-param>
 </servlet>
 <servlet-mapping>
