@@ -119,7 +119,7 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD4C.tmp.jpg)
 
-**重写DefaultKaptcha为DefaultCASKaptcha**
+# 四、**重写DefaultKaptcha为DefaultCASKaptcha**
 
 重写需要干两件事情：
 
@@ -127,13 +127,13 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 2、验证码字体的位置及彩色设置；
 
-**验证码背景图片为彩色**
+## **验证码背景图片为彩色**
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD4D.tmp.jpg)
 
 通过生成随机干扰线实现。
 
-**验证码字体的位置及彩色设置**
+## **验证码字体的位置及彩色设置**
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD4E.tmp.jpg)
 
@@ -163,7 +163,7 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD5F.tmp.jpg)
 
-**修改web.xml配置**
+## **修改web.xml配置**
 
 ```
 <servlet>
@@ -181,11 +181,11 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 </servlet>
 ```
 
-**最终效果图**
+## **最终效果图**
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD60.tmp.jpg)
 
-github代码地址：
+# github代码地址：
 
 [https://github.com/watemei/kaptcha](https://github.com/watemei/kaptcha)
 
