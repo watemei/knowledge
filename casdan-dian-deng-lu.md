@@ -32,7 +32,7 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 # 二、**google Kaptcha的使用及配置**
 
-**maven配置引用**
+## **maven配置引用**
 
 ```
 <!-- https://mvnrepository.com/artifact/com.google.code.kaptcha/kaptcha -->
@@ -43,7 +43,7 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 </dependency>
 ```
 
-**web.xml配置KaptchaServlet**
+## **web.xml配置KaptchaServlet**
 
 ```
 <!--Kaptcha 验证码  --><!--
@@ -93,19 +93,19 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 </servlet-mapping>
 ```
 
-**前端页面设置**
+## **前端页面设置**
 
 ```
  <img src="captcha.jpg" class="login_code_icon" onclick="this.src='captcha.jpg?'+Math.random\(\)"/>
 ```
 
-**效果展示**
+## **效果展示**
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD39.tmp.jpg)
 
 开始尝试通过配置实现，但是效果一字体只能单一颜色，背景样式鱼眼样式、3D、普通模糊,不太好看，只能看源码找方案;
 
-**源码分析**
+# 三、**源码分析**
 
 进入com.google.code.kaptcha.servlet.KaptchaServlet类中是通过BufferedImage bi = this.kaptchaProducer.createImage\(capText\);来绘制图片的。
 
