@@ -1,4 +1,4 @@
-**引言**
+# 一、**引言**
 
 使用goole Kaptcha 生成的验证码样式如下图，
 
@@ -8,7 +8,7 @@
 
 ![](file:///C:\Users\WANGXB~1\AppData\Local\Temp\ksohtml\wpsDD38.tmp.jpg)
 
-**Google Kaptcha简介**
+## **Google Kaptcha简介**
 
 kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生成各种样式的验证码，因为它是可配置的。kaptcha工作的原理是调用 com.google.code.kaptcha.servlet.KaptchaServlet，生成一个图片。同时将生成的验证码字符串放到 HttpSession中。
 
@@ -30,7 +30,7 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 可以看出功能还是蛮多的，配置也提出来。
 
-**google Kaptcha的使用及配置**
+# 二、**google Kaptcha的使用及配置**
 
 **maven配置引用**
 
