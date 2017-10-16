@@ -165,31 +165,21 @@ kaptcha 是一个非常实用的验证码生成工具。有了它，你可以生
 
 **修改web.xml配置**
 
-&lt;servlet&gt;
-
-&lt;servlet-name&gt;Kaptcha&lt;/servlet-name&gt;
-
-&lt;servlet-class&gt;com.google.code.kaptcha.servlet.KaptchaServlet&lt;/servlet-class&gt;
-
-&lt;init-param&gt;
-
-&lt;param-name&gt;kaptcha.border&lt;/param-name&gt;
-
-&lt;param-value&gt;no&lt;/param-value&gt;
-
-&lt;/init-param&gt;
-
-&lt;init-param&gt;
-
-&lt;param-name&gt;kaptcha.producer.impl&lt;/param-name&gt;
-
-&lt;param-value&gt;com.iigeo.cas.DefaultCASKaptcha&lt;/param-value&gt;
-
-&lt;/init-param&gt;
-
+```
+<servlet>
+    <servlet-name>Kaptcha</servlet-name>
+    <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+    <init-param>
+        <param-name>kaptcha.border</param-name>
+        <param-value>no</param-value>
+    </init-param>
+    <init-param>
+        <param-name>kaptcha.producer.impl</param-name>
+        <param-value>com.iigeo.cas.DefaultCASKaptcha</param-value>
+    </init-param>
 ...
-
-&lt;/servlet&gt;
+</servlet>
+```
 
 **最终效果图**
 
